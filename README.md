@@ -2,7 +2,7 @@
 
 > *Upper-case variables refer to command-line arguments. Please refer to Appendix A for details.
 
-#### The Algorithm
+### The Algorithm
 
 
 In a nutshell, this solver introduces a genetic algorithm using random mutations, along with simulated annealing in place to decrease the amount of mutations as more iterations are run. There is a threshold, calculated using the fitness rate `FITNESS`, which greedily decides whether or not an edge in the route is considered for mutation. This threshold becomes lower (i.e. more edges pass the threshold) after each iteration, which is where the simulated annealing comes to action.
@@ -17,14 +17,14 @@ As mentioned above, this algorithm represents a greedy algorithm that always fav
 This algorithm focuses on the ability to choose a "better" route based on previous calculations, not to pick the "best" route out there. Therefore, it is very unlikely that this algorithm will find the shortest answers to the problems.
 
 
-#### Appendix A: Command-line Arguments
+### Appendix A: Command-line Arguments
 `usage: tsp_solver.py [-h] [-b B] [-f F] [-p P] [-s S] [-v {0,1,2}] file`
 
-##### Positional Arguments
+#### Positional Arguments
 `file`
 > path of the .tsp file to be used for solving the TSP. Example files can be found [here](http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsp/index.html).
 
-##### Optional Arguments
+#### Optional Arguments
 `-h, --help`
 > shows the usage and argument descriptions and exits
 
@@ -52,19 +52,19 @@ This algorithm focuses on the ability to choose a "better" route based on previo
 <br> `2`: prints the various objects used during each iteration
 
 
-#### Appendix B: Classes and Methods
+### Appendix B: Classes and Methods
 
-##### Node
+#### Node
 ###### Represents a node found in the .tsp files
 
 Attributes: `id`, `x`, `y`
 
-##### Edge
+#### Edge
 ###### Represents an edge formed by connecting two Nodes
 
 Attributes: `id`, `node_1`, `node_2`, `length`
 
-##### Path
+#### Path
 ###### Represents a path formed by connecting adjacent Edges
 
 Attributes: `edges`, `length`
@@ -75,12 +75,12 @@ Attributes: `edges`, `length`
 `join_with_path(self, path)`
 > Joins the path `path` into `self`.
 
-##### Route
+#### Route
 ###### Represents a full path formed by connecting all nodes in a single .tsp file
 
 Attributes: `nodes`, `edges`, `sorted_edges`, `distance`
 
-#### Appendix C: Helper Functions
+### Appendix C: Helper Functions
 
 `nodes_to_edges(nodes)`
 > `nodes`: list of N Nodes to be converted into N-1 Edges
