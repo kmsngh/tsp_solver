@@ -42,7 +42,7 @@ This algorithm focuses on the ability to choose a "better" route based on previo
 `-s S (type: float, default: 0.5, 0 <= s <= 1)`
 > parameter *s* used in linear ranking
 >
-> The lecture slides show that the domain of *s* is [1, 2], but the calculation was slightly simplified by changing the domain to [0, 1].
+> Probability p for an element of rank r (0 being the best) to be chosen out of n elements is `p = (1-s)/n + (r * s)/sum([1, ..., n])`
 
 `-v, --verbose (type: int, default: 0, v in {0, 1, 2})`
 > sets the verbosity; useful for debugging
