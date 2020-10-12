@@ -22,7 +22,8 @@ This algorithm focuses on the ability to choose a "better" route based on previo
 
 #### Positional Arguments
 `file`
-> path of the .tsp file to be used for solving the TSP. Example files can be found [here](http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsp/index.html).
+> Path of the .tsp file to be used for solving the TSP. Example files can be found [here](http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsp/index.html).
+> <br> This algorithm is made for 2D Euclidean edge type problem instances.
 
 #### Optional Arguments
 `-h, --help`
